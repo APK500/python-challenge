@@ -36,7 +36,10 @@ with open(csvpath, 'r') as file_handler:
    lines = file_handler.read()
    print(lines)
    print(type(lines))
-    
+   Total_Months.append(row[0])
+   
+  
+  str(len(Total_Months))
  
 
  ****************************************************************   
@@ -57,6 +60,9 @@ with open(csvpath, newline='') as csvfile:
     #  Each row is read as a row
     for row in csvreader:
         print(row)
+    str(len(Total_Months))
+
+
 #CODE PRINTS TOTAL NUMBER OF ROWS        
     print("Total no. of rows: %d"%(csvreader.line_num))
     
@@ -140,20 +146,14 @@ import csv
 filename = "Desktop/python-challenge/PyBank/budget_data_1.csv"
 csvpath = os.path.join('Desktop/python-challenge/PyBank', 'budget_data_1.csv')   
 
+import pandas
 
-
-pd.read_csv(filename)
-
-df.sum()
-
-
-
-df = pd.DataFrame(columns = ['Date','revenue'])
+data = pandas.read_csv("test.csv", header=0)
+col_a = list(data.a)
+col_b = list(data.b)
 
 
 
-
-df.sum()
 
 
 
